@@ -12,11 +12,7 @@ namespace Library
     {
         public int Id { get; init; }
         public string Title { get; set; } = default!;
-        public int AuthorId { get; set; } = default!;
-        public Author Author([Parent] Book book)
-        {
-            return AuthorList.Authors[book.AuthorId];
-        }
+        public string Author { get; set; } = default!;
         public string? Summary { get; set; } 
     }
 }
