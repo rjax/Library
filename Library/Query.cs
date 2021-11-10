@@ -16,14 +16,5 @@ namespace Library
         {
             return BookList.Books[0];
         }
-
-        public List<Author> Authors()
-        {
-            return AuthorList.Authors;
-        }
-        public Author Author()
-        {
-            return AuthorList.Authors[0];
-        }
     }
 }
