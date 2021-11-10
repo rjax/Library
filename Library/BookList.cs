@@ -13,28 +13,24 @@ namespace Library
             {
                 Id = 1,
                 AuthorId = 1,
-                //Author = "Ernest Hemingway",
                 Title = "For Whom The Bell Tolls"
             },
             new Book
             {
                 Id = 2,
                 AuthorId = 2,
-                //Author = "F. Scot Fitzgerald",
                 Title = "The Great Gatsby"
             },
             new Book
             {
                 Id = 3,
                 AuthorId = 3,
-                //Author = "William Faulkner",
                 Title = "The Sound and the Fury"
             },
             new Book
             {
                 Id = 4,
                 AuthorId = 4,
-                //Author = "Tom Clancy",
                 Title = "Red Storm Rising"
             },
      };

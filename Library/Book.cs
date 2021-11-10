@@ -15,8 +15,8 @@ namespace Library
         public int AuthorId { get; set; } = default!;
         public Author Author([Parent] Book book)
         {
-            return AuthorList.Authors[book.AuthorId];
+            return AuthorList.Authors.FirstOrDefault(a => a.Id == book.AuthorId)??new Author();
         }
-        public string? Summary { get; set; } 
+        public string? Summary { get; set; }
     }
 }
