@@ -12,5 +12,6 @@ The purpose of this repository is to demonstrate how to code a GraphQL server us
 3. Create a static List of Author Instances
 4. Run the project and query for an Author and Authors
 ## Step 3
-1. Modify the Book class, change the Author property to a resolver
+* HotChocolate implicitly adds properties of classes that are exposed in the Query class as resolvers. In this step we change the Author string property of the Book class to a method that returns the Author object referenced by the AuthorId property of the Book.
+* Note that HotChocolate switches the property names to camelcase.
 
