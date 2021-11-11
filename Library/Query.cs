@@ -12,18 +12,26 @@ namespace Library
             return BookList.Books;
         }
 
-        public Book GetBook()
+        public Book GetBookById(int id)
         {
-            return BookList.Books[0];
+            return BookList.Books.FirstOrDefault(b => b.Id == id) ?? new Book();
+        }
+        public Book GetBookByTitle(string title)
+        {
+            return BookList.Books.FirstOrDefault(b => b.Title.Contains(title, StringComparison.OrdinalIgnoreCase)) ?? new Book();
         }
 
         public List<Author> Authors()
         {
             return AuthorList.Authors;
         }
-        public Author Author()
+        public Author GetAuthorById(int id)
         {
-            return AuthorList.Authors[0];
+            return AuthorList.Authors.FirstOrDefault(a => a.Id == id) ?? new Author();
+        }
+        public Author GetAuthorByName(string name)
+        {
+            return AuthorList.Authors.FirstOrDefault(a => a.Name.Contains(name, StringComparison.OrdinalIgnoreCase)) ?? new Author();
         }
     }
 }
