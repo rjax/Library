@@ -7,7 +7,8 @@ namespace Library
 {
     public class AuthorList
     {
-        public static List<Author> Authors => new List<Author>
+        public static List<Author> Authors => authors;
+        private static List<Author> authors = new List<Author>
         {
             new Author
             {

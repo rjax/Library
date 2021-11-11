@@ -7,7 +7,7 @@ namespace Library
 {
     public class BookList
     {
-        public static List<Book> Books => new List<Book>
+        private static List<Book> bookList = new List<Book>
         {
             new Book
             {
@@ -33,6 +33,7 @@ namespace Library
                 AuthorId = 4,
                 Title = "Red Storm Rising"
             },
-     };
+        };
+        public static List<Book> Books => bookList;
     }
 }
