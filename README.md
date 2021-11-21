@@ -34,6 +34,11 @@ Modify BookList to allow adding of books
 Modify AuthorsList to allow adding of Authors
 ### Step 7: Using ObjectType to explicitly create types
 
+## Breaking up the schema
+The most basic schema consists of Query, Mutation and Subscription types. HotChocolate supports schema stitching. Schema stitching allows the schema types to be defined separately and then 'stiched' together into a single schema. This allows us to separate the queries from the mutations and from the subscriptions. New types can be created. In Hotchocolate new types are created using the ExtendObjectTypeAttribute
 
+### Creating mutation types
+Mutations have input and output, the output is called a payload. When defining Mutation types we need to define it's input and payload. input and payload may be scalar values or object values.
+The schema can be broken up into smaller pieces
 
 
