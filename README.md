@@ -41,4 +41,13 @@ The most basic schema consists of Query, Mutation and Subscription types. HotCho
 Mutations have input and output, the output is called a payload. When defining Mutation types we need to define it's input and payload. input and payload may be scalar values or object values.
 The schema can be broken up into smaller pieces
 
+## Implementing with EF Core and SQL
+* There a number of issues when implementing a GraphQL server using EF Core and SQL
+  * The n + 1 problem
+  * Synchronization of the gql schema with the EF Entity models.
+    * To use EF efficiently, the gql schema should be derived from the the EF Entities.
+    * The entity classes may be augmented with methods but not properties. Adding properties causes exceptions when EF selects data because the added properties don't exist in the target table or view.
+    * It is likely that filtering and sorting by fields that were added to the entity in code will also cause exceptions for the same reason
+    * For these reasons it is probably for the best that the fields of EF entity model match the gql schema fields.
+  * When using views as the basis for the EF entities, it is not clear how we will perform mutations 
 
