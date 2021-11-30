@@ -50,4 +50,6 @@ The schema can be broken up into smaller pieces
     * It is likely that filtering and sorting by fields that were added to the entity in code will also cause exceptions for the same reason
     * For these reasons it is probably for the best that the fields of EF entity model match the gql schema fields.
   * When using views as the basis for the EF entities, it is not clear how we will perform mutations 
-
+## Pagination
+* Issues
+    * The default pagination does not provide a mechanism to set a default order by clause. This is important since paged data should have a deterministic order. Ideally the user can set any order that they choose, however not all order by clauses are deterministic and there should be a way to add an additionial deterministic clause after the users clause.
